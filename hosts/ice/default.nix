@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, outputs, ... }:
 
 {
   imports =
@@ -46,7 +46,12 @@
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
   
-  nixpkgs.config.allowUnfreePredicate = _: true;
+  nixpkgs = {
+    config.allowUnfreePredicate = _: true;
+    overlays = [
+      outputs.overlays.stable
+    ];
+  };
   environment.systemPackages = with pkgs; [
     home-manager
     vim
@@ -68,7 +73,7 @@
     wl-clipboard
     fd
     bat
-    exa
+    eza
     jq
     httpie
     aria
@@ -84,7 +89,7 @@
 	numpy
       ]
     ))
-    pypy3
+    stable.pypy3
     #(sage.override { requireSageTests = false; })
   ];
 
@@ -92,7 +97,7 @@
   programs.hyprland.xwayland.enable = true;
   programs.ssh.startAgent = true;
 
-  fonts.fonts = with pkgs; [
+  fonts.packages = with pkgs; [
     powerline-fonts
     noto-fonts
     noto-fonts-cjk

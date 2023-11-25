@@ -2,7 +2,7 @@
 
 {
   home.shellAliases = {
-    "ls" = "exa";
+    "ls" = "eza";
     "cat" = "bat";
     "v" = "nvim";
     ":q" = "exit";

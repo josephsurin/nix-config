@@ -6,7 +6,7 @@
     abbreviations = {
       "lst" = "ls --tree";
       "lsg" = "ls | grep";
-      "lsth" = "exa -l --sort=new";
+      "lsth" = "eza -l --sort=new";
       "hsg" = "history | grep";
       "hst" = "history";
       "mdc" = "mkdir -p __CURSOR__ && cd \$_";
