@@ -93,6 +93,22 @@ in
         ", mouse:275, exec, grimblast --cursor --freeze copy area"
         ", mouse:276, exec, wlrctl keyboard type v modifiers CTRL"
 
+        # audio
+        ", F2, exec, wpctl set-mute '@DEFAULT_AUDIO_SINK@' toggle"
+        ", F3, exec, wpctl set-volume '@DEFAULT_AUDIO_SINK@' 5%-"
+        ", F4, exec, wpctl set-volume '@DEFAULT_AUDIO_SINK@' 5%+"
+
+        # arrowkey navigation/movement
+        "$mainMod, LEFT, movefocus, l"
+        "$mainMod, RIGHT, movefocus, r"
+        "$mainMod, DOWN, movefocus, d"
+        "$mainMod, UP, movefocus, u"
+        "$mainMod SHIFT, LEFT, movewindow, l"
+        "$mainMod SHIFT, RIGHT, movewindow, r"
+        "$mainMod SHIFT, DOWN, movewindow, d"
+        "$mainMod SHIFT, UP, movewindow, u"
+
+        # hjkl navigation/movement
         "$mainMod, H, movefocus, l"
         "$mainMod, L, movefocus, r"
         "$mainMod, J, movefocus, d"
@@ -101,6 +117,13 @@ in
         "$mainMod SHIFT, L, movewindow, r"
         "$mainMod SHIFT, J, movewindow, d"
         "$mainMod SHIFT, K, movewindow, u"
+
+        # cross monitor navigation/movement (with , and .)
+        "$mainMod, COMMA, focusmonitor, l"
+        "$mainMod, PERIOD, focusmonitor, r"
+        "$mainMod SHIFT, COMMA, movewindow, mon:l"
+        "$mainMod SHIFT, PERIOD, movewindow, mon:r"
+        "$mainMod SHIFT, M, movecurrentworkspacetomonitor, -1"
 
         "$mainMod, 1, workspace, 1"
         "$mainMod, 2, workspace, 2"
