@@ -92,6 +92,11 @@ bind = CTRL SHIFT, SPACE, exec, dunstctl close-all
 
 # grimblast
 bind = CTRL SHIFT, 4, exec, grimblast --notify --cursor --freeze copy area
+bind = CTRL SHIFT, 3, exec, grimblast --notify --cursor --freeze copy active
+bind = CTRL SHIFT, 2, exec, grimblast --notify --cursor --freeze copy output
+bind = CTRL SHIFT, 1, exec, grimblast --notify --cursor --freeze copy screen
+bind = , mouse:275, exec, grimblast --notify --cursor --freeze copy area
+bind = , mouse:276, exec, wlrctl keyboard type v modifiers CTRL
 
 bind = $mainMod, H, movefocus, l
 bind = $mainMod, L, movefocus, r
