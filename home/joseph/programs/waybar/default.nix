@@ -8,7 +8,8 @@
         position = "top";
         height = 30;
         output = [
-          "Virtual-1"
+          "VGA-1"
+          "DVI-D-1"
         ];
         modules-left = [ "hyprland/workspaces" ];
         modules-center = [ "clock" ];

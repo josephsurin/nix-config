@@ -14,11 +14,11 @@
       "cpv" = "rsync -ah --progress";
       "epoch" = "date +%s";
 
-      "hm" = "~/.config/home-manager/";
-      "hms" = "home-manager switch";
+      "hm" = "~/nix-config/home/joseph/";
+      "hms" = "home-manager switch --flake '/home/joseph/nix-config/#joseph'";
 
-      "cnix" = "sudoedit /etc/nixos/configuration.nix";
-      "rnix" = "sudo nixos-rebuild switch";
+      "cnix" = "$EDITOR ~/nix-config/hosts/ice/default.nix";
+      "rnix" = "sudo nixos-rebuild switch --flake '/home/joseph/nix-config/#ice'";
       
       "ds" = "~/ded/";
 

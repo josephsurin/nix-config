@@ -25,7 +25,18 @@
     pulse.enable = true;
   };
 
-  hardware.opengl.enable = true;
+  hardware.opengl = {
+    enable = true;
+    driSupport = true;
+    driSupport32Bit = true;
+  };
+  hardware.nvidia = {
+    modesetting.enable = true;
+    powerManagement.enable = false;
+    powerManagement.finegrained = false;
+    open = false;
+    nvidiaSettings = true;
+  };
 
   nix = {
     package = pkgs.nixFlakes;
@@ -52,10 +63,13 @@
       outputs.overlays.stable
     ];
   };
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; pkgs.lib.lists.flatten [
     home-manager
     vim
     neovim
+    bitwarden
+    discord
+    telegram-desktop
     wget
     curl
     firefox
@@ -71,6 +85,7 @@
     ripgrep
     ripgrep-all
     wl-clipboard
+    wlr-randr
     fd
     bat
     eza
@@ -80,17 +95,23 @@
     dig
     dogdns
     libnotify
-    (python3.withPackages(ps: with ps;
-      [
-	pycryptodome
-	tqdm
-	gmpy2
+    (let
+      python-pkgs = ps: with ps; [
+        pycryptodome
+        tqdm
+        gmpy2
         requests
-	numpy
-      ]
-    ))
-    stable.pypy3
-    #(sage.override { requireSageTests = false; })
+        numpy
+      ];
+    in
+    [
+      (python3.withPackages(python-pkgs))
+      stable.pypy3
+      (sage.override {
+        requireSageTests = false;
+        extraPythonPackages = python-pkgs;
+      })
+    ])
   ];
 
   programs.hyprland.enable = true;
