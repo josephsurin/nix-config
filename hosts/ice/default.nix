@@ -88,6 +88,7 @@
     aria
     dig
     dogdns
+    killall
 
     vim
     neovim

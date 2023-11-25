@@ -11,9 +11,10 @@
           "VGA-1"
           "DVI-D-1"
         ];
-        modules-left = [ "hyprland/workspaces" ];
+        modules-left = [ "hyprland/workspaces" "hyprland/submap" ];
         modules-center = [ "clock" ];
-        modules-right = [ "memory" "cpu" "temperature" "wireplumber" "network" "battery" "tray" ];
+        # modules-right = [ "memory" "cpu" "temperature" "wireplumber" "network" "battery" "tray" ];
+        modules-right = [ "memory" "cpu" "wireplumber" "network" "tray" ];
         "hyprland/workspaces" = {
         };
         "clock" = {

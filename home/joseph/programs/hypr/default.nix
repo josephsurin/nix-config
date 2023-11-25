@@ -164,9 +164,33 @@ in
       binde = SHIFT, J, resizeactive, 0 10
       bind = , ESCAPE, submap, reset
       submap = reset
+
+      bind = $mainMod SHIFT, S, submap, powermenu
+
+      submap = powermenu
+      binde = , D, submap, powermenu-confirm-poweroff
+      submap = powermenu-confirm-poweroff
+      binde = , ENTER, exec, poweroff now
+      bind = , ESCAPE, submap, reset
+
+      submap = powermenu
+      binde = , E, submap, powermenu-confirm-exit
+      binde = , ENTER, exit,
+      bind = , ESCAPE, submap, reset
+
+      submap = powermenu
+      binde = , L, exec, swaylock
+      binde = , S, exec, systemctl suspend
+      binde = , M, exec, sleep 1 && hyprctl dispatch dpms off
+      binde = , N, exec, sleep 1 && hyprctl dispatch dpms on
+      binde = , N, submap, reset
+
+      bind = , ESCAPE, submap, reset
+      submap = reset
     '';
   };
 
+  programs.swaylock.enable = true;
   home.packages = with pkgs; [
     hyprpaper
   ];
