@@ -89,6 +89,12 @@
     dig
     dogdns
     killall
+    unzip
+    gnutar
+    xz
+    p7zip
+    cpio
+    netcat-openbsd
 
     vim
     neovim
@@ -101,11 +107,27 @@
     swayimg
     imv
     imagemagick
+    zathura
+    mpv
+    vlc
 
     hyprpaper
     wl-clipboard
     wlr-randr
+    wine-wayland
     libnotify
+
+    ghidra
+    burpsuite
+
+    vscode
+    nodejs
+    yarn
+    go
+    cargo
+    rustc
+    jdk17
+    ruby
 
     (let
       python-pkgs = ps: with ps; [
