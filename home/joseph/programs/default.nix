@@ -3,6 +3,7 @@
     ./hypr
     ./waybar
     ./zsh
+    ./alacritty
     ./nvim
     ./git
     ./rofi
