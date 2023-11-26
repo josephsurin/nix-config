@@ -31,15 +31,15 @@ in
       general = {
         gaps_in = 2;
         gaps_out = 4;
-        border_size = 1;
-        "col.active_border" = "rgba(33ccffee)";
-        "col.inactive_border" = "rgba(595959aa)";
+        border_size = 2;
+        "col.active_border" = "rgba(${config.colorScheme.colors.base0D}f0)";
+        "col.inactive_border" = "rgba(${config.colorScheme.colors.base04}80)";
         layout = "dwindle";
       };
 
       decoration = {
         blur.enabled = false;
-        rounding = 2;
+        rounding = 4;
         drop_shadow = "no";
       };
 
@@ -66,6 +66,10 @@ in
         workspace_back_and_forth = true;
         allow_workspace_cycles = true;
       };
+
+      windowrulev2 = [
+        "opacity 0.98 override 0.95 override,class:(alacritty)"
+      ];
 
       "$mainMod" = "SUPER";
       bind = [

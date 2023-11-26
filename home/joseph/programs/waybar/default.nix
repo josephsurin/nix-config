@@ -114,14 +114,14 @@ in
       }
 
       #workspaces, #submap, #clock, #network, #wireplumber {
-        background: ${hsToRGBA config.colorScheme.colors.base00 "0.8"};
+        background: ${hsToRGBA config.colorScheme.colors.base00 "0.9"};
         color: #${config.colorScheme.colors.base05};
         border-radius: 8px;
         margin-top: 6px;
       }
 
       #memory, #cpu, #battery {
-        background: ${hsToRGBA config.colorScheme.colors.base00 "0.8"};
+        background: ${hsToRGBA config.colorScheme.colors.base00 "0.9"};
         border-radius: 8px;
         margin-top: 6px;
       }
