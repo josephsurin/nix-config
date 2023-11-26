@@ -3,18 +3,18 @@
 let
   nix-colors-lib = nix-colors.lib.contrib { inherit pkgs; };
   nix-colors = inputs.nix-colors;
+  abbrevs = import ./abbreviations.nix { pkgs = pkgs; };
 in
 {
   imports = [
     ./aliases.nix
-    ./abbreviations.nix
   ];
 
   programs.zsh = {
     enable = true;
     enableAutosuggestions = true;
     enableCompletion = true;
-    enableVteIntegration = true;
+    enableVteIntegration = false;
     syntaxHighlighting = {
       enable = true;
     };
@@ -27,16 +27,19 @@ in
     };
     historySubstringSearch.enable = true;
     initExtra = ''
+      ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
       sh ${nix-colors-lib.shellThemeFromScheme { scheme = config.colorScheme; }}
       source ~/.p10k.zsh
       autoload edit-command-line; zle -N edit-command-line
       bindkey -M vicmd v edit-command-line
-      ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
       zstyle ':completion:*' menu select
       bindkey -M menuselect 'h' vi-backward-char
       bindkey -M menuselect 'k' vi-up-line-or-history
       bindkey -M menuselect 'l' vi-forward-char
       bindkey -M menuselect 'j' vi-down-line-or-history
+    '';
+    envExtra = ''
+      source ${abbrevs.file}
     '';
     plugins = [
       {
@@ -47,6 +50,7 @@ in
       {
         name = "zsh-vi-mode";
         src = pkgs.zsh-vi-mode;
+        file = "share/zsh-vi-mode/zsh-vi-mode.zsh";
       }
     ];
     oh-my-zsh = {
@@ -58,6 +62,5 @@ in
   home.file.".p10k.zsh".source = ./.p10k.zsh;
   programs.fzf.enable = true;
   programs.fzf.enableZshIntegration = true;
-
-  programs.kitty.enable = true;
+  programs.alacritty.enable = true;
 }

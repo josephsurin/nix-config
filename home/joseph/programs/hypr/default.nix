@@ -170,13 +170,8 @@ in
       submap = powermenu
       binde = , D, submap, powermenu-confirm-poweroff
       submap = powermenu-confirm-poweroff
-      binde = , ENTER, exec, poweroff now
-      bind = , ESCAPE, submap, reset
-
-      submap = powermenu
-      binde = , E, submap, powermenu-confirm-exit
-      binde = , ENTER, exit,
-      bind = , ESCAPE, submap, reset
+      binde = SHIFT, ENTER, exec, poweroff
+      binde = , ESCAPE, submap, reset
 
       submap = powermenu
       binde = , L, exec, swaylock

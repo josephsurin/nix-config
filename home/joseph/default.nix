@@ -24,4 +24,5 @@
   colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-hard;
 
   programs.home-manager.enable = true;
+  news.display = "silent";
 }
