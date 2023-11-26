@@ -120,13 +120,13 @@ in
         margin-top: 6px;
       }
 
-      #memory, #cpu, #battery {
+      #memory, #cpu, #battery, #tray {
         background: ${hsToRGBA config.colorScheme.colors.base00 "0.9"};
         border-radius: 8px;
         margin-top: 6px;
       }
 
-      #submap, #clock, #memory, #cpu, #network, #wireplumber, #battery {
+      #submap, #clock, #memory, #cpu, #network, #wireplumber, #battery, #tray {
         padding-top: 6px;
         padding-bottom: 6px;
       }

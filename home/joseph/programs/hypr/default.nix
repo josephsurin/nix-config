@@ -38,7 +38,7 @@ in
       };
 
       decoration = {
-        blur.enabled = false;
+        blur.enabled = true;
         rounding = 4;
         drop_shadow = "no";
       };
@@ -68,7 +68,7 @@ in
       };
 
       windowrulev2 = [
-        "opacity 0.98 override 0.95 override,class:(alacritty)"
+        "opacity 0.98 override 0.95 override,class:(Alacritty)"
       ];
 
       "$mainMod" = "SUPER";
