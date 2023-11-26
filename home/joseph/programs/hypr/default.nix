@@ -29,8 +29,8 @@ in
       };
 
       general = {
-        gaps_in = 0;
-        gaps_out = 0;
+        gaps_in = 2;
+        gaps_out = 4;
         border_size = 1;
         "col.active_border" = "rgba(33ccffee)";
         "col.inactive_border" = "rgba(595959aa)";
@@ -39,7 +39,7 @@ in
 
       decoration = {
         blur.enabled = false;
-        rounding = 0;
+        rounding = 2;
         drop_shadow = "no";
       };
 

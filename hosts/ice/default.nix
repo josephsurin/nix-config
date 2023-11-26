@@ -168,5 +168,9 @@
     meslo-lgs-nf
     font-awesome
     twitter-color-emoji
+    fira
+    fira-mono
+    fira-code
+    iosevka
   ];
 }
