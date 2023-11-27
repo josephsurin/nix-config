@@ -92,6 +92,7 @@ in
         "$mainMod SHIFT, R, forcerendererreload,"
         "$mainMod SHIFT, SPACE, togglefloating,"
         "$mainMod, D, exec, rofi -show drun"
+        "$mainMod, P, exec, alacritty -e zsh -c python"
         "$mainMod, T, togglesplit,"
         "$mainMod, F, fullscreen, 0"
         "$mainMod, TAB, workspace, previous"
