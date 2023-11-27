@@ -8,5 +8,6 @@
     ./git
     ./rofi
     ./dunst
+    ./bat
   ];
 }
