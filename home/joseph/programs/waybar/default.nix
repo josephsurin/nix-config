@@ -49,15 +49,8 @@ in
         "clock" = {
           interval = 1;
           format = "{:%H\n%M}";
-          tooltip-format = "<tt><small>{calendar}</small></tt>";
-          calendar = {
-            mode = "year";
-            mode-mon-col = 3;
-            on-click-right = "mode";
-          };
-          actions = {
-            on-click-right = "mode";
-          };
+          tooltip-format = "{:%A %d/%m/%Y %r}";
+          tooltip = true;
         };
         "memory" = {
           interval = 2;

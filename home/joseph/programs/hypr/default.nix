@@ -72,6 +72,7 @@ in
         "opacity 0.98 override 0.93 override,class:(Alacritty)"
         "workspace 2,class:(discord)"
         "workspace 2,class:(org.telegram.desktop)"
+        "workspace 3,class:(firefox)"
       ];
 
       workspace = [

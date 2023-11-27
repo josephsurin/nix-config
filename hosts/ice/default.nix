@@ -27,6 +27,7 @@
     driSupport = true;
     driSupport32Bit = true;
   };
+
   hardware.nvidia = {
     modesetting.enable = true;
     powerManagement.enable = false;
@@ -40,14 +41,28 @@
     settings.experimental-features = [ "nix-command" "flakes" ];
   };
 
+  nixpkgs = {
+    config.allowUnfreePredicate = _: true;
+    overlays = [
+      outputs.overlays.stable
+    ];
+  };
+
   environment.sessionVariables = {
     WLR_NO_HARDWARE_CURSORS = "1";
     SCREENSHOT_DIR = "/media/winarch-shared/screenshots/";
   };
 
+  programs.zsh.enable = true;
+  users.defaultUserShell = pkgs.zsh;
+  programs.hyprland.enable = true;
+  programs.hyprland.xwayland.enable = true;
+  programs.ssh.startAgent = true;
+  virtualisation.docker.enable = true;
+
   users.users.joseph = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "docker" "uinput" ];
+    extraGroups = [ "wheel" "networkmanager" "docker" ];
     packages = with pkgs; [
     ];
     openssh.authorizedKeys.keys = [
@@ -56,15 +71,6 @@
     ];
   };
 
-  programs.zsh.enable = true;
-  users.defaultUserShell = pkgs.zsh;
-  
-  nixpkgs = {
-    config.allowUnfreePredicate = _: true;
-    overlays = [
-      outputs.overlays.stable
-    ];
-  };
   environment.systemPackages = with pkgs; pkgs.lib.lists.flatten [
     home-manager
     firefox
@@ -154,9 +160,6 @@
     ])
   ];
 
-  programs.hyprland.enable = true;
-  programs.hyprland.xwayland.enable = true;
-  programs.ssh.startAgent = true;
   services.tailscale.enable = true;
   services.openssh = {
     enable = true;

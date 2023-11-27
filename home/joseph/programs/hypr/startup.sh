@@ -5,5 +5,6 @@ waybar &
 
 sleep 1
 discord &
-telegram-desktop &
+telegram-desktop -startintray &
+firefox &
 lxqt-policykit-agent &
