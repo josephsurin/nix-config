@@ -72,6 +72,7 @@
     discord
     telegram-desktop
     chromium
+    krita
 
     wget
     curl
@@ -138,6 +139,9 @@
         gmpy2
         requests
         numpy
+        httpx
+        scapy
+        scipy
       ];
     in
     [

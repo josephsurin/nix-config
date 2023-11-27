@@ -26,7 +26,7 @@
         separator_color = "#${config.colorScheme.colors.base01}";
         sort = "yes";
         idle_threshold = 120;
-        font = "Noto Sans 12";
+        font = "Fira Sans 12";
         line_height = 0;
         markup = "full";
         format = "<b>%s</b>\\n%b";

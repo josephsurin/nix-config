@@ -9,7 +9,7 @@
  */
 
 configuration {
-	font:							"Noto Sans Bold 8";
+	font:							"Fira Sans 8";
     show-icons:                     true;
 	icon-theme: 					"Papirus";
     display-drun: 					"";

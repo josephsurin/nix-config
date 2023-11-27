@@ -18,7 +18,7 @@ in
         "VGA-1,1920x1080,2560x0,1"
       ];
 
-      exec-once = "hyprpaper & lxqt-policykit-agent & waybar";
+      exec-once = "${./startup.sh}";
 
       env = "XCURSOR_SIZE,24";
 
@@ -70,9 +70,19 @@ in
 
       windowrulev2 = [
         "opacity 0.98 override 0.93 override,class:(Alacritty)"
+        "workspace 2,class:(discord)"
+        "workspace 2,class:(org.telegram.desktop)"
+      ];
+
+      workspace = [
+        "2,monitor:VGA-1"
+        "3,monitor:VGA-1"
+        "1,monitor:DVI-D-1"
+        "11,monitor:DVI-D-1"
       ];
 
       "$mainMod" = "SUPER";
+
       bind = [
         "$mainMod, RETURN, exec, alacritty"
         "$mainMod SHIFT, Q, killactive,"
@@ -140,6 +150,7 @@ in
         "$mainMod, 8, workspace, 8"
         "$mainMod, 9, workspace, 9"
         "$mainMod, 0, workspace, 10"
+        "$mainMod, U, workspace, 11"
 
         "$mainMod SHIFT, 1, movetoworkspacesilent, 1"
         "$mainMod SHIFT, 2, movetoworkspacesilent, 2"
@@ -151,6 +162,7 @@ in
         "$mainMod SHIFT, 8, movetoworkspacesilent, 8"
         "$mainMod SHIFT, 9, movetoworkspacesilent, 9"
         "$mainMod SHIFT, 0, movetoworkspacesilent, 10"
+        "$mainMod SHIFT, U, movetoworkspacesilent, 11"
       ];
       bindm = [
         "$mainMod, mouse:272, movewindow"
