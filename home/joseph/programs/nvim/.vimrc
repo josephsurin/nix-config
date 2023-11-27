@@ -27,8 +27,11 @@ let g:airline_symbols.space = "\ua0"
 let g:python_highlight_all = 1
 syntax on
 
-colorscheme base16-gruvbox-dark-hard
+colorscheme gruvbox
 let g:airline_theme='base16_gruvbox_dark_medium'
+let g:gruvbox_contrast_dark = "hard"
+hi! Normal guibg=NONE ctermbg=NONE
+hi Comment cterm=italic ctermfg=green
 set background=dark
 set termguicolors
 

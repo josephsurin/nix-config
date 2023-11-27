@@ -14,6 +14,7 @@
       vim-airline
       vim-airline-themes
       base16-vim
+      gruvbox
       nerdtree
       vim-easymotion
       vim-commentary
