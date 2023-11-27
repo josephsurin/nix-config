@@ -2,10 +2,11 @@
 
 let
   ss_wrap = ss_type:
-    "[ -d $SCREENSHOT_DIR/`date +\"%Y-%m\"` ]" +
-    " || mkdir $SCREENSHOT_DIR/`date +\"%Y-%m\"`" +
-    " && grimblast --cursor --freeze copysave ${ss_type}" +
-    " $SCREENSHOT_DIR/`date +\"%Y-%m\"`/`date +\"%Y-%m-%d-at-%I-%M-%S%p-${ss_type}.png\"`";
+    "fn=$SCREENSHOT_DIR/`date +\"%Y-%m/%Y-%m-%d-at-%I-%M-%S%p-${ss_type}.png\"`;" +
+    "mkdir -p `dirname $fn`" +
+    " && grimblast --cursor --freeze copysave ${ss_type} $fn" +
+    " && [[ $(dunstify -A yes,SHOW -i $fn \"Screenshot Taken\" \"${ss_type}\") == \"yes\" ]]" +
+    " && imv $fn";
 in
 {
   wayland.windowManager.hyprland = {
@@ -68,7 +69,7 @@ in
       };
 
       windowrulev2 = [
-        "opacity 0.98 override 0.95 override,class:(Alacritty)"
+        "opacity 0.98 override 0.93 override,class:(Alacritty)"
       ];
 
       "$mainMod" = "SUPER";
@@ -193,6 +194,8 @@ in
   home.packages = with pkgs; [
     hyprpaper
   ];
-  home.file.".config/hypr/hyprpaper.conf".source = ./hyprpaper.conf;
-  home.file.".config/hypr/wallpaper.png".source = ./wallpaper.png;
+  home.file.".config/hypr/hyprpaper.conf".text = ''
+    preload =${../../wallpapers/hue-teo-kaju-blast.jpg}
+    wallpaper = ,${../../wallpapers/hue-teo-kaju-blast.jpg}
+  '';
 }

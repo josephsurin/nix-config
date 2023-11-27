@@ -5,7 +5,7 @@
     enable = true;
     settings = {
       global = {
-        corner_radius = 8;
+        corner_radius = 6;
         monitor = 0;
         follow = "mouse";
         width = 0;
@@ -16,12 +16,14 @@
         shrink = "yes";
         transparency = 10;
         notification_height = 0;
-        separator_height = 1;
+        separator_height = 2;
         padding = 16;
         horizontal_padding = 16;
-        frame_width = 1;
-        frame_color = "#676b6d";
-        separator_color = "#575b5d";
+        frame_width = 2;
+        # gaps = true;
+        # gap_size = 8;
+        frame_color = "#${config.colorScheme.colors.base03}";
+        separator_color = "#${config.colorScheme.colors.base01}";
         sort = "yes";
         idle_threshold = 120;
         font = "Noto Sans 12";
@@ -51,19 +53,19 @@
         per_monitor_dpi = false;
       };
       urgency_low = {
-        background = "#202126";
-        foreground = "#888888";
+        background = "#${config.colorScheme.colors.base00}e0";
+        foreground = "#${config.colorScheme.colors.base05}";
         timeout = 10;
       };
       urgency_normal = {
-        background = "#202126";
-        foreground = "#ffffff";
+        background = "#${config.colorScheme.colors.base00}e0";
+        foreground = "#${config.colorScheme.colors.base05}";
         timeout = 6;
       };
       urgency_critical = {
-        background = "#900000";
-        foreground = "#ffffff";
-        frame_color = "#ff0000";
+        background = "#${config.colorScheme.colors.base00}e0";
+        foreground = "#${config.colorScheme.colors.base05}";
+        frame_color = "#${config.colorScheme.colors.base08}";
         timeout = 0;
       };
     };

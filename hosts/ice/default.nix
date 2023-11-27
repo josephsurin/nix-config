@@ -95,6 +95,8 @@
     p7zip
     cpio
     netcat-openbsd
+    exiftool
+    exiv2
 
     vim
     neovim
