@@ -1,5 +1,6 @@
 #!/bin/sh
 
+fcitx5 &
 hyprpaper &
 waybar &
 

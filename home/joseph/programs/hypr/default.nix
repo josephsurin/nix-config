@@ -69,7 +69,6 @@ in
       };
 
       windowrulev2 = [
-        "opacity 0.98 override 0.93 override,class:(Alacritty)"
         "workspace 2,class:(discord)"
         "workspace 2,class:(org.telegram.desktop)"
         "workspace 3,class:(firefox)"
@@ -195,6 +194,7 @@ in
       submap = powermenu
       binde = , L, exec, swaylock
       binde = , S, exec, systemctl suspend
+      binde = , S, submap, reset
       binde = , M, exec, sleep 1 && hyprctl dispatch dpms off
       binde = , N, exec, sleep 1 && hyprctl dispatch dpms on
       binde = , N, submap, reset

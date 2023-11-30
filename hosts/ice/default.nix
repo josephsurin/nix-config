@@ -48,6 +48,11 @@
     ];
   };
 
+  i18n.inputMethod = {
+    enabled = "fcitx5";
+    fcitx5.addons = with pkgs; [ fcitx5-mozc ];
+  };
+
   environment.sessionVariables = {
     WLR_NO_HARDWARE_CURSORS = "1";
     SCREENSHOT_DIR = "/media/winarch-shared/screenshots/";
@@ -104,6 +109,8 @@
     netcat-openbsd
     exiftool
     exiv2
+    duf
+    ncdu
 
     vim
     neovim
@@ -125,9 +132,18 @@
     wlr-randr
     wine-wayland
     libnotify
+    xdragon
+    xdg-utils
+    mimeo
 
     ghidra
     burpsuite
+    pwninit
+    stegsolve
+    steghide
+    zsteg
+    hashcat
+    john
 
     vscode
     nodejs
@@ -140,6 +156,7 @@
 
     (let
       python-pkgs = ps: with ps; [
+        pwntools
         pycryptodome
         tqdm
         gmpy2

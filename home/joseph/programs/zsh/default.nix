@@ -14,7 +14,7 @@ in
     enable = true;
     enableAutosuggestions = true;
     enableCompletion = true;
-    enableVteIntegration = false;
+    enableVteIntegration = true;
     syntaxHighlighting = {
       enable = true;
     };
@@ -25,7 +25,6 @@ in
       save = 100000000;
       size = 100000000;
     };
-    historySubstringSearch.enable = true;
     initExtra = ''
       ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
       sh ${nix-colors-lib.shellThemeFromScheme { scheme = config.colorScheme; }}
@@ -37,6 +36,11 @@ in
       bindkey -M menuselect 'k' vi-up-line-or-history
       bindkey -M menuselect 'l' vi-forward-char
       bindkey -M menuselect 'j' vi-down-line-or-history
+      function init_fzf() {
+        source ${pkgs.fzf}/share/fzf/completion.zsh
+        source ${pkgs.fzf}/share/fzf/key-bindings.zsh
+      }
+      zvm_after_init_commands+=(init_fzf)
     '';
     envExtra = ''
       source ${abbrevs.file}
@@ -61,6 +65,5 @@ in
 
   home.file.".p10k.zsh".source = ./.p10k.zsh;
   programs.fzf.enable = true;
-  programs.fzf.enableZshIntegration = true;
   programs.alacritty.enable = true;
 }
