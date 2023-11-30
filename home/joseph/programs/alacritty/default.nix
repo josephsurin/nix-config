@@ -18,6 +18,8 @@
         dynamic_padding = false;
 
         decorations = "full";
+
+        opacity = 0.96;
       };
 
       font = {

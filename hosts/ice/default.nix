@@ -119,6 +119,7 @@
     kitty
     alacritty
     foot
+    tmux
 
     swayimg
     imv
@@ -144,13 +145,14 @@
     zsteg
     hashcat
     john
+    semgrep
+    brakeman
+    gosec
 
     vscode
-    nodejs
-    yarn
-    go
-    cargo
-    rustc
+    nodejs yarn
+    go gopls delve go-tools
+    rustc cargo
     jdk17
     ruby
 
@@ -162,6 +164,7 @@
         gmpy2
         requests
         numpy
+        sympy
         httpx
         scapy
         scipy

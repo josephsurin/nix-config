@@ -9,5 +9,7 @@
     ./rofi
     ./dunst
     ./bat
+    ./vs-code
+    ./tmux
   ];
 }

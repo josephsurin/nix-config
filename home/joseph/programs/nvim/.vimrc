@@ -30,9 +30,9 @@ syntax on
 colorscheme gruvbox
 let g:airline_theme='base16_gruvbox_dark_medium'
 let g:gruvbox_contrast_dark = "hard"
-hi! Normal guibg=NONE ctermbg=NONE
+hi Normal guibg=NONE ctermbg=NONE
 hi Comment cterm=italic ctermfg=green
-set background=dark
+" set background=dark
 set termguicolors
 
 highlight clear LineNr
