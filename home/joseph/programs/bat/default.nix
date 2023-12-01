@@ -5,6 +5,9 @@
     enable = true;
     config = {
       theme = "gruvbox-dark";
+      map-syntax = [
+        "*.sage:Python"
+      ];
     };
   };
 }
