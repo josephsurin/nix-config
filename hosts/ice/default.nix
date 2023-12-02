@@ -174,6 +174,8 @@
         httpx
         scapy
         scipy
+        parse
+        (pkgs.python3Packages.binteger ps)
       ];
     in
     [
