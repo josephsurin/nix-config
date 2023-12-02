@@ -25,6 +25,7 @@
     pkgs = nixpkgs.legacyPackages.${system};
   in {
     overlays = import ./overlays { inherit inputs outputs; };
+    packages = import ./pkgs { inherit pkgs; };
 
     nixosConfigurations = {
       ice = nixpkgs.lib.nixosSystem {

@@ -45,6 +45,7 @@
     config.allowUnfreePredicate = _: true;
     overlays = [
       outputs.overlays.stable
+      outputs.overlays.additions
     ];
   };
 
@@ -112,6 +113,7 @@
     duf
     ncdu
     htop-vim
+    magic-wormhole
 
     vim
     neovim
@@ -150,6 +152,8 @@
     semgrep
     brakeman
     gosec
+    msolve
+    flatter
 
     vscode
     nodejs yarn
