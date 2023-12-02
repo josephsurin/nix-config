@@ -175,7 +175,8 @@
         scapy
         scipy
         parse
-        (pkgs.python3Packages.binteger ps)
+        pkgs.python3Packages.binteger
+        pkgs.python3Packages.lbc-toolkit
       ];
     in
     [
