@@ -111,6 +111,7 @@
     exiv2
     duf
     ncdu
+    htop-vim
 
     vim
     neovim
@@ -136,6 +137,7 @@
     xdragon
     xdg-utils
     mimeo
+    libwacom
 
     ghidra
     burpsuite

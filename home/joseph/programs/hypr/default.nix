@@ -27,6 +27,10 @@ in
         follow_mouse = "1";
         touchpad.natural_scroll = "no";
         sensitivity = 0;
+
+        tablet = {
+          output = "DVI-D-1";
+        };
       };
 
       general = {
