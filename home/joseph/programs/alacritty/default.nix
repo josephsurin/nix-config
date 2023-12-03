@@ -19,7 +19,7 @@
 
         decorations = "full";
 
-        opacity = 0.96;
+        opacity = 0.93;
       };
 
       font = {

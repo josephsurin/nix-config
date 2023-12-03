@@ -73,6 +73,7 @@ in
       };
 
       windowrulev2 = [
+        "opacity 1 override 0.95 override,class:(Alacritty)"
         "workspace 2,class:(discord)"
         "workspace 2,class:(org.telegram.desktop)"
         "workspace 3,class:(firefox)"
@@ -213,7 +214,7 @@ in
     hyprpaper
   ];
   home.file.".config/hypr/hyprpaper.conf".text = ''
-    preload =${../../wallpapers/hue-teo-kaju-blast.jpg}
-    wallpaper = ,${../../wallpapers/hue-teo-kaju-blast.jpg}
+    preload =${../../wallpapers/white_blue_red_clouds_by_hangmoon_dbwm5ly.jpg}
+    wallpaper = ,${../../wallpapers/white_blue_red_clouds_by_hangmoon_dbwm5ly.jpg}
   '';
 }
