@@ -141,10 +141,13 @@
     xdg-utils
     mimeo
     libwacom
+    mtpfs
+    simple-mtpfs
 
     ghidra
     burpsuite
     pwninit
+    gdb
     stegsolve
     steghide
     zsteg
@@ -155,13 +158,24 @@
     gosec
     msolve
     flatter
+    ropgadget
+    unicorn
+    one_gadget
+    keystone
 
+    gcc gcc_multi
+    clang clang-tools
     vscode
     nodejs yarn
     go gopls delve go-tools
     rustc cargo
     jdk17
     ruby
+    android-tools
+    qemu qemu-utils
+    virtualbox
+
+    openssl
 
     (let
       python-pkgs = ps: with ps; [
@@ -176,6 +190,10 @@
         scapy
         scipy
         parse
+        pillow
+        crccheck
+        unicorn
+        keystone-engine
         pkgs.python3Packages.binteger
         pkgs.python3Packages.lbc-toolkit
       ];
