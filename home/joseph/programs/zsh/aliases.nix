@@ -8,6 +8,6 @@
     ":q" = "exit";
     "h" = "http";
     "p" = "python";
-    "o" = "mimeo";
+    "o" = "xdg-open";
   };
 }
