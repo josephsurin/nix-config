@@ -3,8 +3,8 @@
 {
   xdg = {
     mimeApps.enable = true;
-    mimeApps.associations.added = {
-      "application/pdf" = [ "zathura.desktop" ];
+    mimeApps.defaultApplications = {
+      "application/pdf" = "org.pwmt.zathura.desktop";
       "x-scheme-handler/http" = "firefox.desktop";
       "x-scheme-handler/https" = "firefox.desktop";
       "x-scheme-handler/chrome" = "firefox.desktop";
