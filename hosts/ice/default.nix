@@ -110,6 +110,7 @@
     netcat-openbsd
     exiftool
     exiv2
+    whois
     duf
     ncdu
     htop-vim
