@@ -114,6 +114,8 @@
     duf
     ncdu
     htop-vim
+    pfetch
+    neofetch
     magic-wormhole
 
     vim
@@ -160,8 +162,10 @@
     flatter
     ropgadget
     unicorn
-    one_gadget
     keystone
+    one_gadget
+    seccomp-tools
+    bata24-gef
 
     gcc gcc_multi
     clang clang-tools
@@ -170,7 +174,6 @@
     go gopls delve go-tools
     rustc cargo
     jdk17
-    ruby
     android-tools
     qemu qemu-utils
     virtualbox
@@ -205,6 +208,14 @@
         requireSageTests = false;
         extraPythonPackages = python-pkgs;
       })
+    ])
+
+    (let
+      ruby-pkgs = ps: with ps; [
+      ];
+    in
+    [
+      (ruby.withPackages(ruby-pkgs))
     ])
   ];
 
