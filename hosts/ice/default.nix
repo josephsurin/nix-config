@@ -137,7 +137,7 @@
     hyprpaper
     wl-clipboard
     wlr-randr
-    wine-wayland
+    bottles
     libnotify
     xdragon
     xdg-utils

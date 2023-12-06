@@ -210,9 +210,6 @@ in
   };
 
   programs.swaylock.enable = true;
-  home.packages = with pkgs; [
-    hyprpaper
-  ];
   home.file.".config/hypr/hyprpaper.conf".text = ''
     preload =${../../wallpapers/white_blue_red_clouds_by_hangmoon_dbwm5ly.jpg}
     wallpaper = ,${../../wallpapers/white_blue_red_clouds_by_hangmoon_dbwm5ly.jpg}
