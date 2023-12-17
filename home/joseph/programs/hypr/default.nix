@@ -149,7 +149,7 @@ in
 
         # preselect splits
         "$mainMod, v, layoutmsg, preselect d"
-        "$mainMod, h, layoutmsg, preselect r"
+        "$mainMod, s, layoutmsg, preselect r"
 
         "$mainMod, 1, workspace, 1"
         "$mainMod, 2, workspace, 2"
