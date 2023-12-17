@@ -53,6 +53,7 @@ in
       dwindle = {
         pseudotile = "yes";
         preserve_split = "yes";
+        split_width_multiplier = 2;
       };
 
       master = {
@@ -145,6 +146,10 @@ in
         "$mainMod SHIFT, COMMA, movewindow, mon:l"
         "$mainMod SHIFT, PERIOD, movewindow, mon:r"
         "$mainMod SHIFT, M, movecurrentworkspacetomonitor, -1"
+
+        # preselect splits
+        "$mainMod, v, layoutmsg, preselect d"
+        "$mainMod, h, layoutmsg, preselect r"
 
         "$mainMod, 1, workspace, 1"
         "$mainMod, 2, workspace, 2"
