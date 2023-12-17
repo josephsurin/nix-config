@@ -166,7 +166,9 @@
     one_gadget
     seccomp-tools
     bata24-gef
+    patchelf
 
+    man-pages
     gcc gcc_multi
     clang clang-tools
     vscode
@@ -212,6 +214,7 @@
 
     (let
       ruby-pkgs = ps: with ps; [
+        solargraph
       ];
     in
     [

@@ -12,5 +12,6 @@
     ./vs-code
     ./tmux
     ./xdg
+    ./pwninit
   ];
 }

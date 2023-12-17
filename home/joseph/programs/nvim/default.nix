@@ -27,6 +27,8 @@
       vimtex
       vim-polyglot
       vim-nix
+      coc-solargraph
+      vim-ruby
     ];
     extraConfig = builtins.readFile ./.vimrc;
   };
