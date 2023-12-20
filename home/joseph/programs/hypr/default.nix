@@ -53,7 +53,7 @@ in
       dwindle = {
         pseudotile = "yes";
         preserve_split = "yes";
-        split_width_multiplier = 2;
+        split_width_multiplier = 1.5;
       };
 
       master = {

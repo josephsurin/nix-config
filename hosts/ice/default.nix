@@ -167,6 +167,7 @@
     seccomp-tools
     bata24-gef
     patchelf
+    ecm
 
     man-pages
     gcc gcc_multi

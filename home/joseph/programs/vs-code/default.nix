@@ -54,6 +54,7 @@
       ms-python.python
       vscodevim.vim
       eamodio.gitlens
+      ms-vscode.cpptools
     ];
     keybindings = [
       {
@@ -235,6 +236,14 @@
           key = "ctrl+l";
           command = "-notebook.centerActiveCell";
           when = "notebookEditorFocused";
+      }
+      {
+          key = "ctrl+p";
+          command = "workbench.action.quickOpen";
+      }
+      {
+          key = "ctrl+shift+p";
+          command = "workbench.action.showAllSymbols";
       }
     ];
   };

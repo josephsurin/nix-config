@@ -10,5 +10,6 @@
     "p" = "python";
     "o" = "xdg-open";
     "pwninit" = "pwninit --template-path ~/.config/pwninit/template.py";
+    "gdb" = "gef";
   };
 }
