@@ -106,6 +106,7 @@ in
         "CTRL, GRAVE, exec, dunstctl history-pop"
         "CTRL, SPACE, exec, dunstctl close"
         "CTRL SHIFT, SPACE, exec, dunstctl close-all"
+        "CTRL SHIFT, Q, exec, dunstctl set-paused toggle"
 
         # grimblast
         "CTRL SHIFT, 4, exec, ${ss_wrap "area"}"

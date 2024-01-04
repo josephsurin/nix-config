@@ -10,9 +10,9 @@ curl \
     --silent \
     --fail \
     --output /dev/null \
-    --data "{\"hostname\": \"$(hostname)\", \"type\": \"currentwindow\", \"client\": \"aw-watcher-hyprland\"}" \
+    --data "{\"hostname\": \"$(hostname)\", \"type\": \"afkstatus\", \"client\": \"aw-watcher-hyprland\"}" \
     --header "Content-Type: application/json" \
-    --request POST "localhost:5600/api/0/buckets/aw-watcher-wayfk_$(hostname)"
+    --request POST "localhost:5600/api/0/buckets/aw-watcher-afk_$(hostname)"
 
 while true; do
     st=$(timeout $PULSETIME wayidle --timeout=$IDLE_TIMEOUT echo "asdf")
@@ -32,7 +32,7 @@ while true; do
         --output /dev/null \
         --data "$post_data" \
         --header "Content-Type: application/json" \
-        --request POST "localhost:5600/api/0/buckets/aw-watcher-wayfk_$(hostname)/heartbeat?pulsetime=$PULSETIME")
+        --request POST "localhost:5600/api/0/buckets/aw-watcher-afk_$(hostname)/heartbeat?pulsetime=$PULSETIME")
 
     echo "API resp code: $res"
 done
