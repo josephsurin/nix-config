@@ -104,6 +104,7 @@
     killall
     unzip
     gnutar
+    unrar
     xz
     p7zip
     cpio
@@ -117,6 +118,7 @@
     pfetch
     neofetch
     magic-wormhole
+    pavucontrol
 
     vim
     neovim
@@ -134,9 +136,14 @@
     mpv
     vlc
 
+    aw-server-rust
+    aw-watcher-hyprland
+    aw-watcher-wayfk
+
     hyprpaper
     wl-clipboard
     wlr-randr
+    wayidle
     bottles
     libnotify
     xdragon
@@ -168,10 +175,12 @@
     bata24-gef
     patchelf
     ecm
+    sqlitebrowser
 
     man-pages
     gcc gcc_multi
     clang clang-tools
+    gnumake
     vscode
     nodejs yarn
     go gopls delve go-tools

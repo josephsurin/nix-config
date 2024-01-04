@@ -9,3 +9,7 @@ discord &
 telegram-desktop -startintray &
 firefox &
 lxqt-policykit-agent &
+
+aw-server &
+aw-watcher-wayfk &
+aw-watcher-hyprland &

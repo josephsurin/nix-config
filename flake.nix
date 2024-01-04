@@ -36,7 +36,13 @@
 
     homeConfigurations = {
       joseph = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
+        pkgs = import nixpkgs {
+          inherit system;
+          overlays = [
+            outputs.overlays.stable
+            outputs.overlays.additions
+          ];
+        };
         extraSpecialArgs = { inherit inputs outputs; };
         modules = [ ./home/joseph ];
       };

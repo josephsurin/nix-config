@@ -29,6 +29,7 @@
       vim-nix
       coc-solargraph
       vim-ruby
+      aw-watcher-vim
     ];
     extraConfig = builtins.readFile ./.vimrc;
   };
